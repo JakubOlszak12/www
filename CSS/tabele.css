@@ -1,0 +1,31 @@
+table{
+    text-align: center;
+    width: 95%;
+    margin:2%;  
+    word-wrap: break-word;
+    table-layout: fixed;
+    font-weight: bold;    
+    color:white;
+    box-shadow: 2px 2px 3px black;
+}
+caption{
+    font-size: 120%;
+    font-weight: bold;
+    color:black;
+}
+
+thead, tfoot{
+
+    font-size: 110%;
+    padding:5pt;
+}
+
+tfoot a{
+    color:#ffffff;
+}
+tr:nth-child(odd){
+    background-color: rgb(138, 138, 138);
+}   
+tr:nth-child(even){
+    background-color: rgb(177, 177, 177);
+}   

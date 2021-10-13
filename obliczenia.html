@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Szybki kurs HTML </title>
+<link href="CSS/style.css" type="text/css" rel="stylesheet">
+<script src="js/funkcje.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+    //akcje do wykonywania po załadowaniu strony
+    $('body').css('font-weight','bold   ');
+    $('#wynik').css('background','lightgreen');
+    $('#miesiac').css('background','lightgreen');
+    $('#odsetki').css('background','lightgreen');
+
+    });
+    </script>
+<style>
+    article{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 4px;
+    }
+
+    input[type="submit"]
+    {
+        margin: auto;
+        width:50%;
+        cursor:pointer; 
+    }
+
+    input[type="submit"]:hover{
+        transition: all 200ms ease;
+    background-color: gray;
+    border: 1px solid black;
+    color:white;
+    }
+
+    h3{
+        margin-bottom: 10px ;
+    }
+
+    #liczby{
+        float:left;
+        width: 50%;
+        height: 100%;
+    }
+    #dzialania{
+       width: 50%;
+       text-align: center;
+    }
+    fieldset{
+        display: flex;
+        flex-direction: row;
+    }
+    #dzialania input{
+        width:auto;
+    }
+    td:nth-child(2){
+        text-align: left;
+    }
+
+    table{
+        table-layout: fixed;
+        width: 50%;
+    }
+
+    table input[type="text"]{
+        width: 100%;
+        min-width: 100px;
+    }
+
+@media only screen and (max-width : 710px){
+        table input[type="text"]{
+           max-width: 70px;
+        }
+    
+    }
+
+</style>
+<style>
+</style>
+</head>
+<body>
+<section>
+<header><h2>Szybki kurs HTML</h2></header>
+<div id="slider-wrapper">
+	<div class="inner-wrapper">
+	  <input checked type="radio" name="slide" class="control" id="Slide1" />
+	  <label for="Slide1" id="s1"></label>
+	  <input type="radio" name="slide" class="control" id="Slide2" />
+	  <label for="Slide2" id="s2"></label>
+	  <input type="radio" name="slide" class="control" id="Slide3" />
+	  <label for="Slide3" id="s3"></label>
+	  <input type="radio" name="slide" class="control" id="Slide4" />
+	  <label for="Slide4" id="s4"></label>
+	  <div class="overflow-wrapper">
+		<a class="slide" href=""><img src="zdjecia/zdjecia/obraz1.JPG" /></a>
+		<a class="slide" href=""><img src="zdjecia/zdjecia/obraz2.JPG" /></a>
+		<a class="slide" href=""><img src="zdjecia/zdjecia/obraz3.JPG" /></a>
+		<a class="slide" href=""><img src="zdjecia/zdjecia/obraz10.JPG" /></a>
+	  </div>
+	</div>
+  </div>
+<nav>
+	<ul id="nav">
+		<li><a href="index.html">Podstawy</a></li>
+		<li><a href="tabele.html">Tabele</a></li>
+		<li><a href="">Formularze</a>
+		<ul>
+		<li><a href="formularze.html" >Pola formularza</a></li>
+		<li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+		</ul>
+		</li>
+		<li><a href="galeria.html" title="">Galeria</a></li>
+		</ul> 
+</nav>
+<article>
+	<h3>Pożyczka:</h3>
+
+	<label for="kwota">Kwota:</label><input type="number" id="kwota">
+	<label for="raty">Ile rat:</label><input type="number" id="raty">
+	<label for="proc">Procent:</label><input type="number" id="proc">
+	<label for="miesiac">Rata miesięczna:</label><input type="number" id="miesiac" disabled>
+	<label for="odsetki">Kwota z odsetkami:</label><input type="number" id="odsetki" disabled>
+    <input type="submit" id="wyslij" onclick="obliczenia()">
+
+    <fieldset>
+        <legend>Kalkulatorek</legend>
+        <div id="liczby">
+            <h4>Wpisz liczby:</h4>
+            <label>X:</label>
+            <input type="number" id="x">
+            <label>Y:</label>
+            <input type="number" id="y">
+            <input type="submit" onclick="oblicz()">
+        </div>
+        <div id="dzialania">
+            <h4>Wskaż działanie</h4>
+            <table>
+           <tr><td><input type="radio" name="operator" value="+"></td><td><label>+</label></td></tr>
+           <tr><td><input type="radio" name="operator" value="-"></td><td><label>-</label></td></tr>
+           <tr><td><input type="radio" name="operator" value="*"></td><td><label>*</label></td></tr>
+           <tr><td><input type="radio" name="operator" value="/"></td><td><label>/</label></td></tr>
+           <tr><td><label>Wynik:</label></td><td><input type="text" id="wynik" disabled></td></tr>
+        </table>
+            
+        </div>
+    </fieldset>
+</article>
+<aside>
+	<div class="box">
+		<h3>Walidatory:</h3>
+		<ul>
+			<li> <a href="http://validator.w3.org/">HTML </a></li>
+ 			<li> <a href="http://jigsaw.w3.org/css-validator/">CSS</a></li>
+		</ul>
+	</div>
+	<div class="box">
+		<h3>Kursy:</h3>
+		<ul>
+			<li> <a href="https://www.w3schools.com/html/"> HTML </a></li>
+			<li> <a href="https://www.w3schools.com/css/"> CSS </a></li>
+			<li> <a href="https://www.w3schools.com/js/"> JS </a></li>
+			<li> <a href="https://www.w3schools.com/php/"> PHP </a></li>
+			</ul>
+	</div>
+</aside>
+<footer> &copy;JO </footer>
+
+</section>
+</body>
+
+</html>

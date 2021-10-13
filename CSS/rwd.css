@@ -1,0 +1,153 @@
+body{ 
+    background:#d4c7b9;
+ }
+h1,h2,footer { 
+    padding:0.2em; 
+    text-align:center; 
+}
+
+.srodek { 
+    text-align:center;
+}
+nav{ 
+    float:left; 
+    width:100%; 
+}
+nav, footer {
+    background: #45525a; 
+    color:#ffe9ba;
+     border-radius:10px;
+}
+nav a {
+ float:left;
+ display:block;
+ width:23%;
+ padding:1%;
+ font-size:110%;
+ color:#ffe9ba;
+ text-align:center;
+}
+section { 
+    clear:both;
+}
+img { 
+    max-width: 100%; 
+    height: auto; 
+    width: 90%;
+    border-radius:10px; 
+}
+.slajd {
+ float:left;
+ display:block;
+ width:95%;
+ text-align:center;
+ border-radius:10px;
+ background:#ffe9ba;
+ padding:1% 0.5%;
+ margin:1%;
+}
+.slajd:hover { 
+    background:#45525a; 
+}
+footer { 
+    clear:both; 
+}
+.galeria{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width:90%;
+    padding:5%;
+}
+
+@media screen and (max-width: 720px) {
+    nav a { width: 48%;
+    padding: 10px 0;
+    font-size:140%;
+    }
+    .slajd {width: 45%; }
+    p{
+        font-size:140%;
+    }
+    }
+   @media screen and (min-width: 482px) and (max-width: 720px) {
+    body { font-size: 13px; }
+    h1 { font-size: 23px; }
+    h2 { font-size: 18px; }
+   }
+   
+   @media screen and (max-width: 481px) {
+    body { 
+        font-size: 13px; 
+    }
+    h1 { 
+        font-size: 260%; 
+    }
+    h2 { 
+        font-size: 200%; 
+    }
+    nav a { 
+        width: 48%;
+        padding: 10px 0;
+        font-size:150%;
+    }
+    
+    .slajd {
+        width: 100%; 
+    }
+        
+    nav a { 
+        width: 100%;
+        padding: 10px 0;
+        font-size:200%;
+    }
+
+    p {
+        font-size: 140%;
+    }
+   }
+
+@media only screen and (max-width : 1024px) and (max-height : 1024px) and (orientation : portrait)
+ {
+     body{
+         font-size: 110%;
+     }
+     h1,h2{
+         font-size: 200%;
+     }
+    .galeria{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .slajd{
+        width: 95%;
+    }
+    nav a{
+        font-size: 140%;
+    }
+    .slajd img{
+        width:70%;
+    }
+
+    nav{
+        background-color: transparent;
+        
+    }
+    nav a { 
+        clear: both;
+        position: relative;
+        left: 5%;
+        width: 90%;
+        padding: 10px 0;
+        margin-top: 4px;
+        font-size:130%;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:#45525a;
+        color:#ffe9ba;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    p{
+        font-size: 140%;
+    }
+ }

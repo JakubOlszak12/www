@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Kreator pizzy </title>
+<style>
+    input:hover
+    {
+        transition: all 500ms ease;
+        transition-property: background-color,color;
+        background-color: gray;
+        border:1px solid black;
+        color:white;
+    }
+</style>
+</head>
+<body>
+
+
+<div id="tresc">
+	<h1>Kreator pizzy</h1>
+    <form method="POST" action="mailto:j.jakub66@gmail.com">
+    <fieldset name="halo">
+        <legend>Rozmiar:</legend>
+        <input type="radio" name="rozmiar" value="mala">Mała
+        <input type="radio" name="rozmiar" value="srednia">Średnia
+        <input type="radio" name="rozmiar" value="duza">Duża
+    </fieldset>
+    <fieldset>
+        <legend>Dodatki</legend>
+        <input type="checkbox" name="szynka">Szynka <br/>
+        <input type="checkbox" name="salami">Salami <br/>
+        <input type="checkbox" name="boczek">Boczek <br/>
+        <input type="checkbox" name="papryka">Papryka <br/>
+        <input type="checkbox" name="pomidor">Pomidor <br/>
+        <input type="checkbox" name="ser">Ser <br/>
+    </fieldset>
+    <fieldset>
+        <legend>Sosy:</legend>
+        Wybierz sos:<select multiple name="sos">
+            <option id="Pomidorowy">Pomidorowy</option>
+            <option id="Czosnkowy">Czosnkowy</option>
+            <option id="Ketchuplagodny">Ketchup łagodny</option>
+            <option id="Ketchuppikantny">Ketchup pikantny</option>
+        </select> <br/>
+        Inne uwagi:<textarea cols="70" rows="5" name="uwagi"></textarea>
+    </fieldset><br/>
+    <input type="submit" value="Wyślij zamówienie">
+    <input type="reset" value="Wyczyść danne">
+</form>
+</div>
+<div id="stopka"> &copy;JO </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+ <title> Dotacja</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+ <div>
+ <form action="#" method="get">
+     <fieldset>
+    <datalist id="organizacje">
+        <option value="Wioski Dziecięce SOS"></option>
+        <option value="COR Infants"></option>
+        <option value="SAS"> </option>
+    </datalist>
+    Beneficjent <input type="text" name="Beneficjent" list="organizacie" size="30"
+         required /> <br>
+    Wartosc dotacji <input type="number" name="Wartosc" min="20" step="0.01" title="Wielkość dotacji (minimum 20)" required /> <br>
+</fieldset>
+<fieldset>
+    <legend>Dane karty płatniczej</legend>
+    Karta:
+    <input type="radio" name="CardType" value="Visa"
+        title="Rodzaj karty płatniczej. Wybierz jedną z tych opcji" required /> Visa
+    <input type="radio" name="CardType" value="MasterCard"
+        title="Rodzaj karty płatniczej. Wybierz jedną z tych opcji" /> Master Card <br>
+    Numer <input type="text" name="number" required pattern="([0-9]{13}|[0-9]{16})" size="16"
+        title="Numer karty skladajacy sie z 13 albo 16 cyfr" /> <br>
+    Data ważności <input type="month" name="ExpireDate" min="2021-03" title="Data Ważności karty"
+        title="data waznosci karty" required /> <br>
+    Kod CVV: <input type="text" name="CVV"
+        title="Podaj kod CVV złożony z 3 lub 4 cyfr podanych na odwrocie karty" required
+        pattern="[0-9]{3,4}" />
+</fieldset>
+<fieldset style="border: hidden;">
+    Darczyńca <input type="text" required pattern="\w{3,}">
+</fieldset>
+<input type="submit" value="Rejestruj">
+</form>
+</div>
+</body>
+</html>
